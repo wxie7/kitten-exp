@@ -1,0 +1,12 @@
+language: "C"
+seedFolders:
+  - path: "fuzz4all/Results/gcc"
+    fileExtentions: [".fuzz"]
+
+programsUnderTest:
+  - command: "llvm/test_data/llvm-19.1.6-install/bin/clang"
+    flagsToTest:
+      - flags: ["-x", "c", "-std=c2x", "-c"]
+    versionFlags:
+      flags: ["-v"]
+    crashDetectorClassName: "org.perses.fuzzer.compilers.c.ClangCrashDetector"

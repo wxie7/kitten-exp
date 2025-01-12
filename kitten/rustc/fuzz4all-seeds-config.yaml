@@ -1,0 +1,12 @@
+language: "RUST"
+seedFolders:
+  - path: "fuzz4all/Results/rustc"
+    fileExtentions: [".fuzz"]
+
+programsUnderTest:
+  - command: "rustc/test_data/rustc-788202a-install/bin/rustc"
+    flagsToTest:
+      - flags: ["--crate-type", "staticlib", "-C", "link-dead-code", "-C", "debuginfo=2", "-C", "opt-level=3", "-Z", "mir-opt-level=3"]
+    versionFlags:
+      flags: ["-v"]
+    crashDetectorClassName: "org.perses.fuzzer.compilers.rust.RustcCrashDetector"
