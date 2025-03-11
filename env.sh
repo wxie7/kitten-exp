@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export EXP_ROOT=$(cd "$(dirname "$(realpath "$0")")" && pwd)
+# export EXP_ROOT=$(cd "$(dirname "$(realpath "$0")")" && pwd)
+export EXP_ROOT=$(pwd)
 
 # export OPENAI_API_KEY=""
 # export OPENAI_API_URL=""
