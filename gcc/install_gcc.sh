@@ -20,13 +20,14 @@ fi
 mkdir -p "$GCC_INSTALL"
 mkdir -p "$GCC_BUILD"
 
+GCC_URL="https://github.com/gcc-mirror/gcc.git"
+
 if $USE_LATEST; then
-  git clone --depth 1 git@github.com:gcc-mirror/gcc.git "$GCC_SRC"
+  git clone --depth 1 $GCC_URL "$GCC_SRC"
   cd "$GCC_SRC"
 else
-  git clone git@github.com:gcc-mirror/gcc.git "$GCC_SRC"
+  git clone --branch="releases/gcc-${GCC_VERSION}" $GCC_URL "$GCC_SRC"
   cd "$GCC_SRC"
-  git checkout "releases/gcc-${GCC_VERSION}"
 fi
 
 ./contrib/download_prerequisites
