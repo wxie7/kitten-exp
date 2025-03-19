@@ -23,7 +23,7 @@ mkdir -p "${FINDING_FOLDER}"
 mkdir -p "${MUTANTS_FOLDER}"
 mkdir -p "${COVERAGE_SAVE}"
 
-java -Xmx210G -Xms30G -jar $EXP_ROOT/kira_deploy.jar \
+java -Xmx210G -Xms30G -jar $EXP_ROOT/kitten_deploy.jar \
   --testing-config "$EXP_ROOT/kitten/gcc/fullrun-config.yaml" \
   --random-seed 0 \
   --timeout ${KITTEN_TIMEOUT} \

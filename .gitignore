@@ -4,4 +4,5 @@ temp/
 fuzz4all/
 perses-fuzzer/
 perses-private/
-kira_deploy.jar
+kitten_deploy.jar
+kitten_organizer_deploy.jar

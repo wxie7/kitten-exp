@@ -23,8 +23,8 @@ bash rustc/install_rustc.sh latest
 4. **Compile Kitten**
 ```bash
 git clone https://github.com/uw-pluverse/perses.git
-bazel build kitten/src/org/perses/fuzzer:kira_deploy.jar
-cp bazel-bin/kitten/src/org/perses/fuzzer/kira_deploy.jar $EXP_ROOT
+bazel build kitten/src/org/perses/fuzzer:kitten_deploy.jar
+cp bazel-bin/kitten/src/org/perses/fuzzer/kitten_deploy.jar $EXP_ROOT
 ```
 5. **Collect seeds for C and Rust**  
 ```bash
@@ -38,7 +38,7 @@ python3 rustc/copy_seeds.py
 **Kitten Usage**  
 You can view instructions for using Kitten by running:
 ```bash
-java -jar $EXP_ROOT/kira_deploy.jar --help
+java -jar $EXP_ROOT/kitten_deploy.jar --help
 ```
 Or by visiting [Kitten](https://github.com/uw-pluverse/perses/tree/master/kitten).
 
